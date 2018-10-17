@@ -1,0 +1,26 @@
+{
+  "name": "mouse-activity",
+  "main": "dist/es5.js",
+  "version": "1.0.1",
+  "scripts": {
+    "start": "npm run clean && npm run es5 && npm run es6 && npm run gzip",
+    "clean": "rm -rf dist",
+    "es5": "node_modules/google-closure-compiler-linux/compiler --isolation_mode IIFE --module_resolution WEBPACK --language_in=ECMASCRIPT_NEXT --language_out=ECMASCRIPT5 --compilation_level ADVANCED_OPTIMIZATIONS --js_output_file=dist/es5.js 'src/**.js'",
+    "es6": "node_modules/google-closure-compiler-linux/compiler --isolation_mode IIFE --module_resolution WEBPACK --language_in=ECMASCRIPT_NEXT --language_out=ECMASCRIPT6 --compilation_level ADVANCED_OPTIMIZATIONS --js_output_file=dist/es6.js 'src/**.js'",
+    "gzip": "gzip dist/* -k -f",
+    "test": "parcel test/index.html"
+  },
+  "devDependencies": {
+    "google-closure-compiler-linux": "^20180805.0.0",
+    "parcel-bundler": "^1.10.3"
+  },
+  "keywords": [
+    "mouse",
+    "active",
+    "unactive"
+  ],
+  "homepage": "https://github.com/mini-eggs/mouse-activity",
+  "bugs": "https://github.com/mini-eggs/mouse-activity/issues",
+  "license": "MIT",
+  "repository": "https://github.com/mini-eggs/mouse-activity"
+}
