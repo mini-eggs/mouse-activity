@@ -1,7 +1,7 @@
 {
   "name": "mouse-activity",
   "main": "dist/es5.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "npm run clean && npm run es5 && npm run es6 && npm run gzip",
     "clean": "rm -rf dist",
